@@ -3,7 +3,7 @@
 _________________________
 scope: patroni_cluster
 namespace: /patroni/
-name: ver-ps-02
+name: ver-ps-03
 log:
   level: INFO
   dir: /data/log
@@ -11,7 +11,7 @@ log:
   file_num: 10
 restapi:
   listen: 0.0.0.0:8008
-  connect_address: ver-ps-02:8008 # Изменить на 2 ноде
+  connect_address: ver-ps-03:8008 # Изменить на 2 ноде
   authentication:
     username: patroni
     password: patroni
@@ -90,7 +90,7 @@ bootstrap:
       options: ["createdb"]
 postgresql:
   listen: 0.0.0.0
-  connect_address: 192.168.79.20:5432 # не забываем заменить адрес на 2 ноде.
+  connect_address: 192.168.79.30:5432 # не забываем заменить адрес на 2 ноде.
   use_unix_socket: true
   data_dir: /data/16
   config_dir: /data/16
