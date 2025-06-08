@@ -9,7 +9,7 @@ network:
       dhcp4: no
       dhcp6: no
       addresses:
-        - 192.168.79.20/24
+        - 192.168.79.30/24
       routes:
         - to: default
           via: 192.168.79.1
@@ -18,5 +18,5 @@ network:
           - 192.168.79.4
         search:
           - test.local
-    ens38:
+    ens33:
       dhcp4: yes
