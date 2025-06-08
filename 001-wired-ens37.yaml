@@ -1,0 +1,22 @@
+/etc/netplan/001-wired-ens37.yaml
+Настройка сетевых интерфейсов
+_________________________________
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens37:
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 192.168.79.20/24
+      routes:
+        - to: default
+          via: 192.168.79.1
+      nameservers:
+        addresses:
+          - 192.168.79.4
+        search:
+          - test.local
+    ens38:
+      dhcp4: yes
