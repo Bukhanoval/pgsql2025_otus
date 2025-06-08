@@ -1,5 +1,6 @@
 # ver-ps-01
 Виртуальная машина VMWare 01
+
 Ubuntu 24.04.2 LTS
 etcd Version: 3.4.30
 psql (PostgreSQL) 16.9 
