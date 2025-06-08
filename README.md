@@ -1,5 +1,5 @@
-# ver-ps-02
-Виртуальная машина VMWare 02
+# ver-ps-03
+Виртуальная машина VMWare 03
 
 Ubuntu 24.04.2 LTS
 
@@ -9,4 +9,4 @@ psql (PostgreSQL) 16.9
 
 patroni 4.0.6
 
-IP 192.168.79.20
+IP 192.168.79.30
