@@ -1,0 +1,21 @@
+/etc/default/etcd
+Настройка ETCD
+_________________________
+## etcd(1) daemon options
+## See "/usr/share/doc/etcd-server/op-guide/configuration.md.gz"
+## for available options.
+##
+## Use environment to override, for example: ETCD_NAME=default
+#[Member]
+ETCD_DATA_DIR="/var/lib/etcd"
+ETCD_LISTEN_PEER_URLS="http://0.0.0.0:2380"
+ETCD_LISTEN_CLIENT_URLS="http://0.0.0.0:2379"
+ETCD_NAME="core"
+ETCD_HEARTBEAT_INTERVAL="1000"
+ETCD_ELECTION_TIMEOUT="5000"
+#[Clustering]
+ETCD_INITIAL_ADVERTISE_PEER_URLS="http://ver-ps-01:2380" 
+ETCD_ADVERTISE_CLIENT_URLS="http://ver-ps-01:2379"
+ETCD_INITIAL_CLUSTER="core=http://ver-ps-01:2380,ver-ps-02=http://ver-ps-02:2380,ver-ps-03=ver-ps-03:2380"
+ETCD_INITIAL_CLUSTER_TOKEN="ver"
+ETCD_INITIAL_CLUSTER_STATE="existing"
